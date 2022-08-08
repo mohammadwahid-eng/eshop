@@ -50,4 +50,12 @@ class User extends Authenticatable
     {
         return $this->hasMany(Address::class);
     }
+
+    /**
+     * Get the shops for the user.
+     */
+    public function shops()
+    {
+        return $this->hasMany(Shop::class);
+    }
 }
