@@ -61,4 +61,12 @@ class Product extends Model
     {
         return $this->hasMany(ProductImage::class);
     }
+
+    /**
+     * The attributes that belong to the product.
+     */
+    public function pattributes()
+    {
+        return $this->belongsToMany(ProductAttribute::class, 'attribute_product', 'product_id', 'attribute_id')->withTimestamps();
+    }
 }

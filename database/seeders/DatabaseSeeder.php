@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             AddressSeeder::class,
             ShopSeeder::class,
             ProductCategorySeeder::class,
+            ProductAttributeSeeder::class,
             ProductSeeder::class,
             ProductImageSeeder::class,
         ]);
