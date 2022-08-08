@@ -32,4 +32,12 @@ class ProductCategory extends Model
         'featured'  => 'boolean',
         'parent_id' => 'integer',
     ];
+
+    /**
+     * The products that belong to the category.
+     */
+    public function products()
+    {
+        return $this->belongsToMany(Product::class, 'category_product', 'category_id', 'product_id')->withTimestamps();
+    }
 }

@@ -45,4 +45,12 @@ class Product extends Model
         'active'     => 'boolean',
         'featured'   => 'boolean',
     ];
+
+    /**
+     * The categories that belong to the product.
+     */
+    public function categories()
+    {
+        return $this->belongsToMany(ProductCategory::class, 'category_product', 'product_id', 'category_id')->withTimestamps();
+    }
 }
